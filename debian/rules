@@ -1,4 +1,18 @@
 #!/usr/bin/make -f
 
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/default.mk
+
+export DH_GOPKG := github.com/golang/leveldb
+
 %:
-	dh $@
+	dh $@ --buildsystem=golang --with=golang
+
+override_dh_auto_configure:
+	dh_auto_configure
+	cp -r testdata obj-$(DEB_HOST_MULTIARCH)/src/$(DH_GOPKG)/
+
+# We don't really need to install ldbdump, right?
+override_dh_auto_install:
+	dh_auto_install
+	rm -rf $(CURDIR)/debian/golang-github-golang-leveldb-dev/usr/bin

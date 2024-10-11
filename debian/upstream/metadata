@@ -1,0 +1,5 @@
+---
+Bug-Database: https://github.com/golang/leveldb/issues
+Bug-Submit: https://github.com/golang/leveldb/issues/new
+Repository: https://github.com/golang/leveldb.git
+Repository-Browse: https://github.com/golang/leveldb
