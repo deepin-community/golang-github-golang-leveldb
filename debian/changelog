@@ -1,5 +1,56 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-golang-leveldb (0.0~git20161231.0.3435554-3) unstable; urgency=medium
 
-  * Initial release
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Jelmer Vernooĳ ]
+  * Use secure copyright file specification URI.
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since stretch:
+    + Build-Depends: Drop versioned constraint on debhelper.
+  * Bump debhelper dependency to >= 9, since that's what is used in
+    debian/compat.
+  * Bump debhelper from deprecated 9 to 13.
+  * Set debhelper-compat version in Build-Depends.
+  * Change priority extra to priority optional.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Fri, 01 Jul 2022 00:38:41 +0100
+
+golang-github-golang-leveldb (0.0~git20161231.0.3435554-2) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Remove Built-Using from arch:all -dev package
+
+  [ Michael Stapelberg ]
+  * Set XS-Go-Import-Path
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Fri, 09 Feb 2018 09:21:59 +0100
+
+golang-github-golang-leveldb (0.0~git20161231.0.3435554-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream snapshot.
+    The update mainly addresses randomly failing tests leading to FTBFS.
+    See https://github.com/golang/leveldb/issues/25 and #799472.
+    Closes: #799472
+  * Bump Standards-Version.
+  * Use secure Vcs-*.
+
+ -- Sascha Steinbiss <satta@debian.org>  Fri, 06 Jan 2017 13:19:53 +0100
+
+golang-github-golang-leveldb (0.0~git20150826.0.0e15329-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+  * Add README.source.
+
+ -- Hilko Bengen <bengen@debian.org>  Sat, 09 Jan 2016 15:44:54 +0100
+
+golang-github-golang-leveldb (0.0~git20150720.0.df57eb2-1) unstable; urgency=medium
+
+  * Initial release (Closes: #794595)
+
+ -- Hilko Bengen <bengen@debian.org>  Mon, 03 Aug 2015 21:47:50 +0200

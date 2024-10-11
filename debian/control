@@ -1,15 +1,26 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-golang-leveldb
+Section: devel
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: pkg-go <pkg-go-maintainers@lists.alioth.debian.org>
+Uploaders: Hilko Bengen <bengen@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               dh-golang,
+               golang-go,
+               golang-github-golang-snappy-dev
+Standards-Version: 3.9.8
+Homepage: https://github.com/golang/leveldb
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-golang-leveldb
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-golang-leveldb.git
+XS-Go-Import-Path: github.com/golang/leveldb
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-golang-leveldb-dev
+Architecture: all
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         golang-go,
+         golang-github-golang-snappy-dev,
+Description: Implementation of the LevelDB key/value database in Go
+ LevelDB is a fast key-value storage library written at Google that
+ provides an ordered mapping from string keys to string values.
+ .
+ This is an implementation of LevelDB in the Go language.

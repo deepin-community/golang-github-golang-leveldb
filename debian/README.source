@@ -1,0 +1,12 @@
+golang-github-golang-leveldb-dev for Debian
+-------------------------------------------
+
+Since upstream does not do "properly" tagged releases, we generate it
+from a clone of git://github.com/golang/leveldb by running
+
+git archive --format=tar --prefix=leveldb/ HEAD \
+    | bzip2 -c \
+    > ../golang-github-golang-leveldb_0.0~git$(git log -1 --date=format:%Y%m%d --format=%ad.0.%h HEAD).orig.tar.bz2
+
+ -- Hilko Bengen <bengen@debian.org>, Sat,  9 Jan 2016 15:42:17 +0100
+
